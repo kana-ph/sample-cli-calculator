@@ -76,6 +76,47 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double gon = (Math.PI/200.0) / Double.valueOf(args[0]);
 			return String.valueOf(gon);
+	},
+	SIN {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.sin(rad));
+		}
+	},
+	COS {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.cos(rad));
+		}
+	},
+	TAN {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.sin(rad) / Math.cos(rad));
+		}
+	},
+	CSC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.sin(rad));
+		}
+	},
+	SEC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.cos(rad));
+		}
+	},
+	COT {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.tan(rad));
 		}
 	},
 	POW {
@@ -105,7 +146,9 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double a = Double.valueOf(args[0]);
 			double r = Double.valueOf(args[1]);
-			return String.valueOf(Math.pow(Math.E, Math.log(a)/r));
+			return String.valueOf(Math.pow(Math.E, Math.log(a) / r));
+		}
+	},
 	BASE2 {
 		@Override
 		public String calculate(String[] args) {
@@ -129,6 +172,34 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double factor = Math.pow(10,Double.valueOf(args[1]));
 			return String.valueOf((double)Math.round(Double.valueOf(args[0])*factor)/factor);
+		}
+	},
+	HYPOTENUSE {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			double b = Double.valueOf(args[1]);
+
+			return String.valueOf(Math.hypot(a, b));
+		}
+	},
+	SQAREA {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+
+			return String.valueOf(Math.pow(a, 2));
+		}
+	},
+	TRIAREA {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			double b = Double.valueOf(args[1]);
+
+			double area = (a * b) / 2;
+
+			return String.valueOf(area);
 		}
 	};
 
