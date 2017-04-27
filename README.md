@@ -15,6 +15,11 @@ $ java Calculate <action-name> <arguments...>
 - `multiply A B` - Multiplies the `A` by `B`
 - `divide A B` - Divides `A` by `B`
 - `mod A B` - Performs modulo operations from integer `A` and `B`
+- `deg A` - Converts radians to degrees from integer `A`
+- `rad A` - Converts degrees to radians from integer `A`
+- `abs A` - Converts an integer `A` to its absolute value
+- `deg2gon A` - Converts degrees `A` to a gon
+- `rad2gon A` - Converts radians `A` to a gon
 - `sin rad` - Gets the sin of the inputted value in radians
 - `cos rad` - Gets the cos of the inputted value in radians
 - `tan rad` - Gets the tan of the inputted value in radians
