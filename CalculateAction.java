@@ -1,5 +1,6 @@
 import java.util.Arrays;
 import java.util.Optional;
+import java.math.*;
 
 public enum CalculateAction {
 	ADD {
@@ -62,6 +63,14 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double a = Double.valueOf(args[0]);
 			return String.valueOf(Math.cbrt(a));
+		}
+	},
+	ROOT {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			double r = Double.valueOf(args[1]);
+			return String.valueOf(Math.pow(Math.E, Math.log(a)/r));
 		}
 	};
 
