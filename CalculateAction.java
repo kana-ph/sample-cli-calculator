@@ -69,6 +69,13 @@ public enum CalculateAction {
 			double gon = Double.valueOf(args[0]) * (9.0/10.0);
 			return String.valueOf(gon);
 		}
+	},
+	RAD2GON {
+		@Override
+		public String calculate(String[] args) {
+			double gon = Double.valueOf(args[0]) * (Math.PI/200.0);
+			return String.valueOf(gon);
+		}
 	};
 
 	public abstract String calculate(String[] args);
