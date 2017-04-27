@@ -71,6 +71,29 @@ public enum CalculateAction {
 			double a = Double.valueOf(args[0]);
 			double r = Double.valueOf(args[1]);
 			return String.valueOf(Math.pow(Math.E, Math.log(a)/r));
+	BASE2 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toBinaryString(Integer.parseInt(args[0]));
+		}
+	},
+	BASE8 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toOctalString(Integer.parseInt(args[0]));
+		}
+	},
+	BASE16 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toHexString(Integer.parseInt(args[0]));
+		}
+	},
+	ROUND {
+		@Override
+		public String calculate(String[] args) {
+			double factor = Math.pow(10,Double.valueOf(args[1]));
+			return String.valueOf((double)Math.round(Double.valueOf(args[0])*factor)/factor);
 		}
 	},
 	HYPOTENUSE {
