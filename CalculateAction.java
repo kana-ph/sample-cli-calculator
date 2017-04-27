@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public enum CalculateMethod {
+public enum CalculateAction {
 	ADD {
 		@Override
 		public String calculate(String[] args) {
@@ -40,11 +40,32 @@ public enum CalculateMethod {
 			int b = Integer.valueOf(args[1]);
 			return String.valueOf(a % b);
 		}
+	},
+	DEG {
+		@Override
+		public String calculate(String[] args) {
+			double deg = Math.toDegrees(Double.valueOf(args[0]));
+			return String.valueOf(deg);
+		}
+	},
+	RAD {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Math.toRadians(Double.valueOf(args[0]));
+			return String.valueOf(rad);
+		}
+	},
+	ABS {
+		@Override
+		public String calculate(String[] args) {
+			double abs = Math.abs(Double.valueOf(args[0]));
+			return String.valueOf(abs);
+		}
 	};
 
 	public abstract String calculate(String[] args);
 
-	public static CalculateMethod of(String name) {
+	public static CalculateAction of(String name) {
 		return Arrays.stream(values())
 			.filter(method -> method.name().equals(name.toUpperCase()))
 			.findFirst()
