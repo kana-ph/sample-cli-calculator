@@ -44,22 +44,24 @@ public enum CalculateMethod {
 	SIN {
 		@Override
 		public String calculate(String[] args) {
-			Double rad = Double.valueOf(args[0]);
+			double rad = Double.valueOf(args[0]);
 			return String.valueOf(Math.sin(rad));
 		}
 	},
 	COS {
 		@Override
 		public String calculate(String[] args) {
-			Double rad = Double.valueOf(args[0]);
+			double rad = Double.valueOf(args[0]);
 			return String.valueOf(Math.cos(rad));
 		}
 	},
 	TAN {
 		@Override
 		public String calculate(String[] args) {
-			Double rad = Double.valueOf(args[0]);
-			return String.valueOf(Math.tan(rad));
+			double rad = Double.valueOf(args[0]);
+			double sin = Math.sin(rad);
+			double cos = Math.cos(rad);
+			return String.valueOf(sin / cos);
 		}
 	};
 
