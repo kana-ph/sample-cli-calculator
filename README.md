@@ -18,3 +18,4 @@ $ java Calculate <action-name> <arguments...>
 - `pow B E` - Performs exponential operation with base `B` and exponent `E`
 - `sqrt A` - Performs square root operation on `A`
 - `cbrt A` - Performs cube root operation on `A`
+- `root A R` - Gets the `R`th root of value `A`
