@@ -1,4 +1,5 @@
 import java.util.Arrays;
+import java.util.Optional;
 
 public enum CalculateAction {
 	ADD {
@@ -65,10 +66,13 @@ public enum CalculateAction {
 
 	public abstract String calculate(String[] args);
 
+<<<<<<< HEAD:CalculateAction.java
 	public static CalculateAction of(String name) {
+=======
+	public static Optional<CalculateAction> of(String name) {
+>>>>>>> fe78f710368fee30fe6619b5912f609ff6b77a32:CalculateAction.java
 		return Arrays.stream(values())
 			.filter(method -> method.name().equals(name.toUpperCase()))
-			.findFirst()
-			.orElse(null);
+			.findFirst();
 	}
 }
