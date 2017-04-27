@@ -66,7 +66,7 @@ public enum CalculateAction {
 	DEG2GON {
 		@Override
 		public String calculate(String[] args) {
-			double gon = Double.valueOf(args[0]) * (9.0/10.0);
+			double gon = (9.0/10.0) / Double.valueOf(args[0]);
 			return String.valueOf(gon);
 		}
 	},
