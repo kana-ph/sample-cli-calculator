@@ -15,3 +15,7 @@ $ java Calculate <action-name> <arguments...>
 - `multiply A B` - Multiplies the `A` by `B`
 - `divide A B` - Divides `A` by `B`
 - `mod A B` - Performs modulo operations from integer `A` and `B`
+- `pow B E` - Performs exponential operation with base `B` and exponent `E`
+- `sqrt A` - Performs square root operation on `A`
+- `cbrt A` - Performs cube root operation on `A`
+- `root A R` - Gets the `R`th root of value `A`
