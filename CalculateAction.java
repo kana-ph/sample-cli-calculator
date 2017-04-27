@@ -59,6 +59,13 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			return Integer.toHexString(Integer.parseInt(args[0]));
 		}
+	},
+	ROUND {
+		@Override
+		public String calculate(String[] args) {
+			double factor = Math.pow(10,Double.valueOf(args[1]));
+			return String.valueOf((double)Math.round(Double.valueOf(args[0])*factor)/factor);
+		}
 	};
 
 	public abstract String calculate(String[] args);
@@ -69,4 +76,3 @@ public enum CalculateAction {
 			.findFirst();
 	}
 }
-
