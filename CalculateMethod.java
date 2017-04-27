@@ -48,6 +48,13 @@ public enum CalculateMethod {
 			double e = Double.valueOf(args[1]);
 			return String.valueOf(Math.pow(b,e));
 		}
+	},
+	SQRT {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			return String.valueOf(Math.sqrt(a));
+		}
 	};
 
 	public abstract String calculate(String[] args);
