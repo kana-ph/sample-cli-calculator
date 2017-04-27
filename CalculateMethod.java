@@ -40,6 +40,13 @@ public enum CalculateMethod {
 			int b = Integer.valueOf(args[1]);
 			return String.valueOf(a % b);
 		}
+	},
+	DEG {
+		@Override
+		public String calculate(String[] args) {
+			double deg = Math.toDegrees(Double.valueOf(args[0]));
+			return String.valueOf(deg);
+		}
 	};
 
 	public abstract String calculate(String[] args);
