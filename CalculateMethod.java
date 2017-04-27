@@ -47,6 +47,13 @@ public enum CalculateMethod {
 			double deg = Math.toDegrees(Double.valueOf(args[0]));
 			return String.valueOf(deg);
 		}
+	},
+	RAD {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Math.toRadians(Double.valueOf(args[0]));
+			return String.valueOf(rad);
+		}
 	};
 
 	public abstract String calculate(String[] args);
