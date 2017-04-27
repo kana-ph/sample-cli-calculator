@@ -18,3 +18,5 @@ $ java Calculate <action-name> <arguments...>
 - `deg A` - Converts radians to degrees from integer `A`
 - `rad A` - Converts degrees to radians from integer `A`
 - `abs A` - Converts an integer `A` to its absolute value
+- `deg2gon A` - Converts degrees `A` to a gon
+- `rad2gon A` - Converts radians `A` to a gon
