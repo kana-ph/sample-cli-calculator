@@ -1,6 +1,7 @@
 import java.util.Arrays;
+import java.util.Optional;
 
-public enum CalculateMethod {
+public enum CalculateAction {
 	ADD {
 		@Override
 		public String calculate(String[] args) {
@@ -66,10 +67,9 @@ public enum CalculateMethod {
 
 	public abstract String calculate(String[] args);
 
-	public static CalculateMethod of(String name) {
+	public static Optional<CalculateAction> of(String name) {
 		return Arrays.stream(values())
 			.filter(method -> method.name().equals(name.toUpperCase()))
-			.findFirst()
-			.orElse(null);
+			.findFirst();
 	}
 }
