@@ -97,6 +97,34 @@ public enum CalculateAction {
 			double factor = Math.pow(10,Double.valueOf(args[1]));
 			return String.valueOf((double)Math.round(Double.valueOf(args[0])*factor)/factor);
 		}
+	},
+	HYPOTENUSE {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			double b = Double.valueOf(args[1]);
+
+			return String.valueOf(Math.hypot(a, b));
+		}
+	},
+	SQAREA {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+
+			return String.valueOf(Math.pow(a, 2));
+		}
+	},
+	TRIAREA {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			double b = Double.valueOf(args[1]);
+
+			double area = (a * b) / 2;
+			
+			return String.valueOf(area);
+		}
 	};
 
 	public abstract String calculate(String[] args);
