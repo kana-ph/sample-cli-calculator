@@ -49,6 +49,14 @@ public enum CalculateMethod {
 
 			return String.valueOf(Math.hypot(a, b));
 		}
+	},
+	SQAREA {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+
+			return String.valueOf(Math.pow(a, 2));
+		}
 	};
 
 	public abstract String calculate(String[] args);
