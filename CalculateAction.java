@@ -43,6 +43,48 @@ public enum CalculateAction {
 			return String.valueOf(a % b);
 		}
 	},
+	SIN {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.sin(rad));
+		}
+	},
+	COS {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.cos(rad));
+		}
+	},
+	TAN {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(Math.sin(rad) / Math.cos(rad));
+		}
+	},
+	CSC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.sin(rad));
+		}
+	},
+	SEC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.cos(rad));
+		}
+	},
+	COT {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.tan(rad));
+		}
+	},
 	POW {
 		@Override
 		public String calculate(String[] args) {
@@ -70,7 +112,7 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double a = Double.valueOf(args[0]);
 			double r = Double.valueOf(args[1]);
-			return String.valueOf(Math.pow(Math.E, Math.log(a)/r));
+			return String.valueOf(Math.pow(Math.E, Math.log(a) / r));
 		}
 	},
 	BASE2 {
