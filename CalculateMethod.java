@@ -54,6 +54,13 @@ public enum CalculateMethod {
 			double rad = Math.toRadians(Double.valueOf(args[0]));
 			return String.valueOf(rad);
 		}
+	},
+	ABS {
+		@Override
+		public String calculate(String[] args) {
+			double abs = Math.abs(Double.valueOf(args[0]));
+			return String.valueOf(abs);
+		}
 	};
 
 	public abstract String calculate(String[] args);
