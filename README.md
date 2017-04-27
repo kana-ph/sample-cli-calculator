@@ -14,3 +14,4 @@ $ java Calculate <method> <arguments...>
 - `mod A B` - Performs modulo operations from integer `A` and `B`
 - `pow B E` - Performs exponential operation with base `B` and exponent `E`
 - `sqrt A` - Performs square root operation on `A`
+- `cbrt A` - Performs cube root operation on `A`
