@@ -17,4 +17,4 @@ $ java Calculate <action-name> <arguments...>
 - `mod A B` - Performs modulo operations from integer `A` and `B`
 - `hypotenuse A B` - Computes the hypotenuse from `A` and `B`
 - `sqarea A` - Computes the area of a square from a side `A`
-- `rectarea A B` - Computes the area of a rectange from sides `A` and `B`
+- `triarea A B` - Computes the area of a triangle from  `A` and `B` (base and height)

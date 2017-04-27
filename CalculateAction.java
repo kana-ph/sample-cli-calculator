@@ -59,13 +59,15 @@ public enum CalculateAction {
 			return String.valueOf(Math.pow(a, 2));
 		}
 	},
-	RECTAREA {
+	TRIAREA {
 		@Override
 		public String calculate(String[] args) {
-			double w = Double.valueOf(args[0]);
-			double l = Double.valueOf(args[1]);
+			double a = Double.valueOf(args[0]);
+			double b = Double.valueOf(args[1]);
 
-			return String.valueOf(w * l);
+			double area = (a * b) / 2;
+			
+			return String.valueOf(area);
 		}
 	};
 
