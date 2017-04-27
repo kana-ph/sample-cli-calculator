@@ -15,4 +15,3 @@ $ java Calculate <method> <arguments...>
 - `base2 A` - Converts `A` Decimal Value to its Binary Value
 - `base8 A` - Converts `A` Decimal Value to its Octal Value
 - `base16 A` - Converts `A` Decimal Value to its Hexadecimal Value
-
