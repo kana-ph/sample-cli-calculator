@@ -19,3 +19,7 @@ $ java Calculate <action-name> <arguments...>
 - `sqrt A` - Performs square root operation on `A`
 - `cbrt A` - Performs cube root operation on `A`
 - `root A R` - Gets the `R`th root of value `A`
+- `base2 A` - Converts `A` Decimal value to its Binary value
+- `base8 A` - Converts `A` Decimal value to its Octal value
+- `base16 A` - Converts `A` Decimal value to its Hexadecimal value
+- `round A B` - Round off `A` to the nearest `B` value
