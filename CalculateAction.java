@@ -71,6 +71,8 @@ public enum CalculateAction {
 			double a = Double.valueOf(args[0]);
 			double r = Double.valueOf(args[1]);
 			return String.valueOf(Math.pow(Math.E, Math.log(a)/r));
+		}
+	},
 	BASE2 {
 		@Override
 		public String calculate(String[] args) {
