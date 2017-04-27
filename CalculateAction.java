@@ -76,6 +76,7 @@ public enum CalculateAction {
 		public String calculate(String[] args) {
 			double gon = (Math.PI/200.0) / Double.valueOf(args[0]);
 			return String.valueOf(gon);
+		}
 	},
 	SIN {
 		@Override
