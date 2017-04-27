@@ -44,8 +44,8 @@ public enum CalculateMethod {
 	POW {
 		@Override
 		public String calculate(String[] args) {
-			int b = Integer.valueOf(args[0]);
-			int e = Integer.valueOf(args[1]);
+			double b = Double.valueOf(args[0]);
+			double e = Double.valueOf(args[1]);
 			return String.valueOf(Math.pow(b,e));
 		}
 	};
