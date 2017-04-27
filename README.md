@@ -13,3 +13,4 @@ $ java Calculate <method> <arguments...>
 - `divide A B` - Divides `A` by `B`
 - `mod A B` - Performs modulo operations from integer `A` and `B`
 - `pow B E` - Performs exponential operation with base `B` and exponent `E`
+- `sqrt A` - Performs square root operation on `A`
