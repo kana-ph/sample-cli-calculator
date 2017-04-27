@@ -40,6 +40,14 @@ public enum CalculateMethod {
 			int b = Integer.valueOf(args[1]);
 			return String.valueOf(a % b);
 		}
+	},
+	POW {
+		@Override
+		public String calculate(String[] args) {
+			int b = Integer.valueOf(args[0]);
+			int e = Integer.valueOf(args[1]);
+			return String.valueOf(Math.pow(b,e));
+		}
 	};
 
 	public abstract String calculate(String[] args);
