@@ -55,6 +55,13 @@ public enum CalculateMethod {
 			double a = Double.valueOf(args[0]);
 			return String.valueOf(Math.sqrt(a));
 		}
+	},
+	CBRT {
+		@Override
+		public String calculate(String[] args) {
+			double a = Double.valueOf(args[0]);
+			return String.valueOf(Math.cbrt(a));
+		}
 	};
 
 	public abstract String calculate(String[] args);
