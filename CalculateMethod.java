@@ -40,6 +40,24 @@ public enum CalculateMethod {
 			int b = Integer.valueOf(args[1]);
 			return String.valueOf(a % b);
 		}
+	},
+	BASE2 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toBinaryString(Integer.parseInt(args[0]));
+		}
+	},
+	BASE8 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toOctalString(Integer.parseInt(args[0]));
+		}
+	},
+	BASE16 {
+		@Override
+		public String calculate(String[] args) {
+			return Integer.toHexString(Integer.parseInt(args[0]));
+		}
 	};
 
 	public abstract String calculate(String[] args);
@@ -51,3 +69,4 @@ public enum CalculateMethod {
 			.orElse(null);
 	}
 }
+
