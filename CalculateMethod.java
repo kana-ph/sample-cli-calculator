@@ -57,6 +57,15 @@ public enum CalculateMethod {
 
 			return String.valueOf(Math.pow(a, 2));
 		}
+	},
+	RECTAREA {
+		@Override
+		public String calculate(String[] args) {
+			double w = Double.valueOf(args[0]);
+			double l = Double.valueOf(args[1]);
+
+			return String.valueOf(w * l);
+		}
 	};
 
 	public abstract String calculate(String[] args);
