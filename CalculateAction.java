@@ -60,11 +60,31 @@ public enum CalculateAction {
 		@Override
 		public String calculate(String[] args) {
 			double rad = Double.valueOf(args[0]);
-			double sin = Math.sin(rad);
-			double cos = Math.cos(rad);
-			return String.valueOf(sin / cos);
+			return String.valueOf(Math.sin(rad) / Math.cos(rad));
 		}
-	};
+	},
+	CSC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.sin(rad));
+		}
+	},
+	SEC {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.cos(rad));
+		}
+	},
+	COT {
+		@Override
+		public String calculate(String[] args) {
+			double rad = Double.valueOf(args[0]);
+			return String.valueOf(1 / Math.tan(rad));
+		}
+	}
+	;
 
 	public abstract String calculate(String[] args);
 

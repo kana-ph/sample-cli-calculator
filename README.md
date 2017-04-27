@@ -18,3 +18,6 @@ $ java Calculate <action-name> <arguments...>
 - `sin rad` - Gets the sin of the inputted value in radians
 - `cos rad` - Gets the cos of the inputted value in radians
 - `tan rad` - Gets the tan of the inputted value in radians
+- `csc rad` - Gets the csc of the inputted value in radians
+- `sec rad` - Gets the sec of the inputted value in radians
+- `cot rad` - Gets the cot of the inputted value in radians
