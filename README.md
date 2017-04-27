@@ -12,4 +12,4 @@ $ java Calculate <method> <arguments...>
 - `multiply A B` - Multiplies the `A` by `B`
 - `divide A B` - Divides `A` by `B`
 - `mod A B` - Performs modulo operations from integer `A` and `B`
-
+- `pow B E` - Performs exponential operation with base `B` and exponent `E`
